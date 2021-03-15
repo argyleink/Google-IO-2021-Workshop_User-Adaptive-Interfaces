@@ -1,3 +1,41 @@
+:root {
+  --space-xxs: .25rem;
+  --space-xs:  .5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2rem;
+  --space-xl:  3rem;
+  --space-xxl: 6rem;
+
+  --surface1: hsl(0 0% 10%);
+  --surface2: hsl(0 0% 15%);
+  --surface3: hsl(0 0% 20%);
+  --surface4: hsl(0 0% 25%);
+
+  --text1: hsl(0 0% 95%);
+  --text2: hsl(0 0% 75%);
+
+  --brand: hsl(237 20% 64%);
+  --brand-bg1: hsl(349 64% 70%);
+  --brand-bg2: hsl(300 84% 60%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --surface1: hsl(0 0% 90%);
+    --surface2: hsl(0 0% 100%);
+    --surface3: hsl(0 0% 98%);
+    --surface4: hsl(0 0% 85%);
+
+    --text1: hsl(0 0% 20%);
+    --text2: hsl(0 0% 40%);
+
+    --brand: hsl(237 40% 64%);
+    --brand-bg1: hsl(349 64% 50%);
+    --brand-bg2: hsl(300 84% 40%);
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: unset;
@@ -12,4 +50,181 @@ body {
   min-block-size: 100%;
   min-inline-size: 100%;
   font-family: system-ui, sans-serif;
+
+  padding-block: var(--space-xs);
+  background: var(--surface1);
+  color: var(--text1);
+}
+
+h1,h2,h3 { 
+  font-weight: 500;
+}
+
+main {
+  display: grid;
+  gap: var(--space-xl);
+  place-content: center;
+  padding: var(--space-sm);
+}
+
+@media (min-width: 540px) {
+  main {
+    padding: var(--space-lg);
+  }
+}
+
+@media (min-width: 800px) {
+  main {
+    padding: var(--space-xl);
+  }
+}
+
+form {
+  max-width: 89vw;
+  display: grid;
+  gap: var(--space-xl) var(--space-xxl);
+  --repeat: auto-fit;
+  grid-template-columns: 
+    repeat(var(--repeat), minmax(min(10ch, 100%), 35ch));
+  align-items: flex-start;
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+  form {
+    --repeat: 2;
+  }
+}
+
+section {
+  display: grid;
+  gap: var(--space-md);
+}
+
+header {
+  display: grid;
+  gap: var(--space-xxs);
+}
+
+fieldset {
+  border: 1px solid var(--surface4);
+  background: var(--surface4);
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1px;
+  border-radius: var(--space-sm);
+  overflow: hidden;
+  transition: box-shadow .3s ease;
+}
+
+fieldset:focus-within {
+  box-shadow: 0 5px 20px -10px hsl(0 0% 0% / 50%);
+}
+
+input[type="range"] {
+  display: block;
+  inline-size: 100%;
+  margin: 1ex 0;
+  outline-offset: 5px;
+}
+
+input[type="checkbox"] {
+  inline-size: var(--space-sm);
+  block-size: var(--space-sm);
+  outline-offset: 5px;
+  accent-color: var(--brand);
+  cursor: pointer;
+}
+
+.fieldset-item {
+  background: var(--surface3);
+  transition: background .2s ease;
+
+  display: grid;
+  grid-template-columns: var(--space-lg) 1fr;
+  gap: var(--space-md);
+
+  padding-block: var(--space-sm);
+  padding-inline: var(--space-md);
+}
+
+.fieldset-item > :is(.input-stack, label) {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.fieldset-item > .input-stack > label {
+  display: contents;
+}
+
+.fieldset-item > picture {
+  block-size: var(--space-xl);
+  inline-size: var(--space-xl);
+  clip-path: circle(40%);
+  display: inline-grid;
+  place-content: center;
+  background: var(--surface3) fixed;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fieldset-item > picture {
+    transition: clip-path .3s ease;
+  }
+}
+
+.fieldset-item svg {
+  fill: var(--text2);
+  block-size: var(--space-md);
+}
+
+.fieldset-item > :is(picture, input[type="checkbox"]) {
+  place-self: center;
+}
+
+@media (min-width: 540px) {
+  .fieldset-item {
+    grid-template-columns: var(--space-xxl) 1fr;
+    gap: var(--space-xs);
+    padding-block: var(--space-md);
+    padding-inline: 0 var(--space-xl);
+  }
+}
+
+.fieldset-item:focus-within {
+  background: var(--surface2);
+}
+
+.fieldset-item:focus-within svg {
+  fill: white;
+}
+
+.fieldset-item:focus-within picture {
+  clip-path: circle(50%);
+  background: var(--brand-bg-gradient) fixed;
+}
+
+small {
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+.github-corner {
+  color: var(--surface1);
+  fill: var(--surface3); 
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0)
+  }
+  20%, 60% {
+    transform: rotate(-25deg)
+  }
+  40%, 80% {
+    transform: rotate(10deg)
+  }
 }
