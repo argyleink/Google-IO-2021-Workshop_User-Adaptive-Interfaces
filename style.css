@@ -15,24 +15,20 @@
   --text1: hsl(0 0% 95%);
   --text2: hsl(0 0% 75%);
 
-  --brand: hsl(237 20% 64%);
-  --brand-bg1: hsl(349 64% 70%);
-  --brand-bg2: hsl(300 84% 60%);
+  --brand: hsl(220 50% 70%);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --surface1: hsl(0 0% 90%);
     --surface2: hsl(0 0% 100%);
-    --surface3: hsl(0 0% 98%);
+    --surface3: hsl(0 0% 96%);
     --surface4: hsl(0 0% 85%);
 
     --text1: hsl(0 0% 20%);
     --text2: hsl(0 0% 40%);
 
-    --brand: hsl(237 40% 64%);
-    --brand-bg1: hsl(349 64% 50%);
-    --brand-bg2: hsl(300 84% 40%);
+    --brand: hsl(220 100% 50%);
   }
 }
 
@@ -163,7 +159,7 @@ input[type="checkbox"] {
   clip-path: circle(40%);
   display: inline-grid;
   place-content: center;
-  background: var(--surface3) fixed;
+  background: var(--surface3);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -195,12 +191,11 @@ input[type="checkbox"] {
 }
 
 .fieldset-item:focus-within svg {
-  fill: white;
+  fill: var(--brand);
 }
 
 .fieldset-item:focus-within picture {
   clip-path: circle(50%);
-  background: var(--brand-bg-gradient) fixed;
 }
 
 small {
