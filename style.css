@@ -128,6 +128,15 @@ fieldset:focus-within {
   padding-inline: var(--space-md);
 }
 
+@media (min-width: 540px) {
+  .fieldset-item {
+    grid-template-columns: var(--space-xxl) 1fr;
+    gap: var(--space-xs);
+    padding-block: var(--space-md);
+    padding-inline: 0 var(--space-xl);
+  }
+}
+
 .fieldset-item:focus-within {
   background: var(--surface2);
 }
@@ -162,15 +171,6 @@ fieldset:focus-within {
 
 .fieldset-item:focus-within svg {
   fill: var(--brand);
-}
-
-@media (min-width: 540px) {
-  .fieldset-item {
-    grid-template-columns: var(--space-xxl) 1fr;
-    gap: var(--space-xs);
-    padding-block: var(--space-md);
-    padding-inline: 0 var(--space-xl);
-  }
 }
 
 .sm-stack {
