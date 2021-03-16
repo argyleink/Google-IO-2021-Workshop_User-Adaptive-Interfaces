@@ -1,7 +1,155 @@
-body {
-  font-family: system-ui, sans-serif;
+:root {
+  --space-xxs: .25rem;
+  --space-xs:  .5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2rem;
+  --space-xl:  3rem;
+  --space-xxl: 6rem;
 }
 
-picture > svg {
-  block-size: 2rem;
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  block-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
+  font-family: system-ui, sans-serif;
+
+  padding-block-start: var(--space-xs);
+  padding-block-end: var(--space-xs);
+}
+
+h1,h2,h3 { 
+  font-weight: 500;
+}
+
+main {
+  display: grid;
+  gap: var(--space-xl);
+  place-content: center;
+  padding: var(--space-sm);
+}
+
+@media (min-width: 540px) {
+  main {
+    padding: var(--space-lg);
+  }
+}
+
+@media (min-width: 800px) {
+  main {
+    padding: var(--space-xl);
+  }
+}
+
+form {
+  max-width: 89vw;
+  display: grid;
+  gap: var(--space-xl) var(--space-xxl);
+  --repeat: auto-fit;
+  grid-template-columns: 
+    repeat(var(--repeat), minmax(min(10ch, 100%), 35ch));
+  align-items: flex-start;
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+  form {
+    --repeat: 2;
+  }
+}
+
+section {
+  display: grid;
+  gap: var(--space-md);
+}
+
+header {
+  display: grid;
+  gap: var(--space-xxs);
+}
+
+fieldset {
+  border: 1px solid;
+  padding: 0;
+  display: grid;
+  gap: 1px;
+  border-radius: var(--space-sm);
+  overflow: hidden;
+  transition: box-shadow .3s ease;
+}
+
+fieldset:focus-within {
+  box-shadow: 0 5px 20px -10px hsl(0 0% 0% / 50%);
+}
+
+.fieldset-item {
+  transition: background .2s ease;
+
+  display: grid;
+  grid-template-columns: var(--space-lg) 1fr;
+  gap: var(--space-md);
+
+  padding: var(--space-sm) var(--space-md);
+}
+
+@media (min-width: 540px) {
+  .fieldset-item {
+    grid-template-columns: var(--space-xxl) 1fr;
+    gap: var(--space-xs);
+    padding: var(--space-md) var(--space-xl) var(--space-md) 0;
+  }
+}
+
+.fieldset-item > :is(picture, input[type="checkbox"]) {
+  place-self: center;
+}
+
+.fieldset-item > picture {
+  block-size: var(--space-xl);
+  inline-size: var(--space-xl);
+  clip-path: circle(40%);
+  display: inline-grid;
+  place-content: center;
+}
+
+.fieldset-item:focus-within picture {
+  clip-path: circle(50%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fieldset-item > picture {
+    transition: clip-path .3s ease;
+  }
+}
+
+.fieldset-item svg {
+  block-size: var(--space-md);
+}
+
+.sm-stack {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+input[type="range"] {
+  display: block;
+  inline-size: 100%;
+  margin: 1ex 0;
+  outline-offset: 5px;
+}
+
+input[type="checkbox"] {
+  inline-size: var(--space-sm);
+  block-size: var(--space-sm);
+  outline-offset: 5px;
+}
+
+small {
+  line-height: 1.5;
 }
