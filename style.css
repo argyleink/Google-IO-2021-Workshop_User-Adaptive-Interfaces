@@ -39,15 +39,14 @@
 
 html {
   block-size: 100%;
-  inline-size: 100%;
 }
 
 body {
   min-block-size: 100%;
-  min-inline-size: 100%;
   font-family: system-ui, sans-serif;
 
-  padding-block: var(--space-xs);
+  padding-block-start: var(--space-xs);
+  padding-block-end: var(--space-xs);
   background: var(--surface1);
   color: var(--text1);
 }
@@ -124,16 +123,14 @@ fieldset:focus-within {
   grid-template-columns: var(--space-lg) 1fr;
   gap: var(--space-md);
 
-  padding-block: var(--space-sm);
-  padding-inline: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
 }
 
 @media (min-width: 540px) {
   .fieldset-item {
     grid-template-columns: var(--space-xxl) 1fr;
     gap: var(--space-xs);
-    padding-block: var(--space-md);
-    padding-inline: 0 var(--space-xl);
+    padding: var(--space-md) var(--space-xl) var(--space-md) 0;
   }
 }
 
@@ -201,20 +198,4 @@ small {
 .github-corner {
   color: var(--surface1);
   fill: var(--surface3); 
-}
-
-.github-corner:hover .octo-arm {
-  animation: octocat-wave 560ms ease-in-out
-}
-
-@keyframes octocat-wave {
-  0%, 100% {
-    transform: rotate(0)
-  }
-  20%, 60% {
-    transform: rotate(-25deg)
-  }
-  40%, 80% {
-    transform: rotate(10deg)
-  }
 }
