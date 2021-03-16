@@ -81,20 +81,12 @@ fieldset {
   gap: 1px;
   border-radius: var(--space-sm);
   overflow: hidden;
-  transition: box-shadow .3s ease;
-}
-
-fieldset:focus-within {
-  box-shadow: 0 5px 20px -10px hsl(0 0% 0% / 50%);
 }
 
 .fieldset-item {
-  transition: background .2s ease;
-
   display: grid;
   grid-template-columns: var(--space-lg) 1fr;
   gap: var(--space-md);
-
   padding: var(--space-sm) var(--space-md);
 }
 
@@ -113,19 +105,9 @@ fieldset:focus-within {
 .fieldset-item > picture {
   block-size: var(--space-xl);
   inline-size: var(--space-xl);
-  clip-path: circle(40%);
+  clip-path: circle(50%);
   display: inline-grid;
   place-content: center;
-}
-
-.fieldset-item:focus-within picture {
-  clip-path: circle(50%);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .fieldset-item > picture {
-    transition: clip-path .3s ease;
-  }
 }
 
 .fieldset-item svg {
