@@ -187,7 +187,6 @@ input[type="checkbox"] {
   block-size: var(--space-sm);
   outline-offset: 5px;
   accent-color: var(--brand);
-  cursor: pointer;
 }
 
 small {
