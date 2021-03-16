@@ -34,7 +34,7 @@
 
 * {
   box-sizing: border-box;
-  margin: unset;
+  margin: 0;
 }
 
 html {
