@@ -75,7 +75,6 @@ header {
 }
 
 fieldset {
-  border: 1px solid;
   padding: 0;
   display: grid;
   gap: 1px;
