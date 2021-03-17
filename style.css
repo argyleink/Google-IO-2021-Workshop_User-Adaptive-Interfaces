@@ -15,7 +15,7 @@
   /* build colors with props */
   --brand: hsl(
     var(--hue) 
-    calc(var(--saturation) / 8)
+    calc(var(--saturation) / 2)
     var(--lightness) 
   );
   
