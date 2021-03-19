@@ -36,11 +36,10 @@
       var(--lightness) 
     );
 
-    /* very dark brand blue */
     --text1: hsl(
       var(--hue) 
       var(--saturation)
-      10% /* lower is darker */
+      10%
     );
 
     --text2: hsl(
@@ -49,30 +48,10 @@
       30%
     );
     
-    /* very bright brand white */
-    --surface1: hsl(
-      var(--hue) 
-      calc(var(--saturation) / 6) 
-      90% /* higher is lighter */
-    );
-
-    --surface2: hsl(
-      var(--hue) 
-      calc(var(--saturation) / 8) 
-      99% 
-    );
-
-    --surface3: hsl(
-      var(--hue) 
-      calc(var(--saturation) / 8) 
-      96% 
-    );
-
-    --surface4: hsl(
-      var(--hue) 
-      calc(var(--saturation) / 8) 
-      85% 
-    );
+    --surface1: hsl(var(--hue) 20% 90%);
+    --surface2: hsl(var(--hue) 10% 99%);
+    --surface3: hsl(var(--hue) 10% 96%);
+    --surface4: hsl(var(--hue) 10% 85%);
   }
 }
 
