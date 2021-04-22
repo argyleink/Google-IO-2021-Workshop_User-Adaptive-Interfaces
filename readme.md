@@ -4,7 +4,7 @@ This repository is a branch by branch walk through of this [Google IO 2021 Works
 
 ### Getting Started
 
-[Vite](https://vitejs.dev/) is the tool used in this project. Have node.js installed and run the following commands:
+[Vite](https://vitejs.dev/) is the tool used in this project. Have node.js (v12 or newer) installed and run the following commands:
 
 ```bash
 npm install
