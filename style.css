@@ -194,7 +194,7 @@ fieldset:focus-within {
   clip-path: circle(40%);
   display: inline-grid;
   place-content: center;
-  background: var(--surface3);
+  background: var(--surface4);
 }
 
 .fieldset-item:focus-within picture {
