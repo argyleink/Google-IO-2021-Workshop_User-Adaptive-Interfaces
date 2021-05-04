@@ -222,7 +222,6 @@ fieldset:focus-within {
 input[type="range"] {
   display: block;
   inline-size: 100%;
-  margin: 1ex 0;
   outline-offset: 5px;
 }
 
