@@ -1,4 +1,6 @@
 :root {
+  color-scheme: dark light;
+
   --space-xxs: .25rem;
   --space-xs:  .5rem;
   --space-sm:  1rem;
