@@ -214,7 +214,7 @@ fieldset:focus-within {
   fill: var(--brand);
 }
 
-.sm-stack {
+.input-stack {
   display: grid;
   gap: var(--space-xs);
 }
