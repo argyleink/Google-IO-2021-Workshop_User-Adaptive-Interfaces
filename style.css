@@ -233,7 +233,6 @@ input[type="checkbox"] {
 
 input {
   outline-offset: 5px;
-  accent-color: var(--brand);
 }
 
 small {
