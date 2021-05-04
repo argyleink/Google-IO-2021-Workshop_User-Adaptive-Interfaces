@@ -1,7 +1,3 @@
-body {
-  font-family: system-ui, sans-serif;
-}
-
-picture > svg {
+svg {
   block-size: 2rem;
 }
