@@ -222,16 +222,15 @@ fieldset:focus-within {
 input[type="range"] {
   display: block;
   inline-size: 100%;
-  outline-offset: 5px;
 }
 
 input[type="checkbox"] {
   inline-size: var(--space-sm);
   block-size: var(--space-sm);
-  outline-offset: 5px;
 }
 
 input {
+  outline-offset: 5px;
   accent-color: var(--brand);
 }
 
