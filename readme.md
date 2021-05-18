@@ -1,6 +1,6 @@
 ## Welcome
 
-This repository is a branch by branch walk through of this [Google IO 2021 Workshop](https://codelabs.developers.google.com/codelabs/user-adaptive-interfaces#6)
+This repository is a branch by branch walk through of this [Google IO 2021 Workshop](https://codelabs.developers.google.com/codelabs/user-adaptive-interfaces)
 
 ### Getting Started
 
