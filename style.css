@@ -121,7 +121,7 @@ main {
 }
 
 form {
-  max-width: 89vw;
+  max-inline-size: 89vw;
   display: grid;
   gap: var(--space-xl) var(--space-xxl);
   --repeat: auto-fit;
@@ -176,7 +176,8 @@ fieldset:focus-within {
   .fieldset-item {
     grid-template-columns: var(--space-xxl) 1fr;
     gap: var(--space-xs);
-    padding: var(--space-md) var(--space-xl) var(--space-md) 0;
+    padding-block: var(--space-md);
+    padding-inline: 0 var(--space-xl);
   }
 }
 
